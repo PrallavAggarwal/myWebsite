@@ -1,5 +1,7 @@
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
+import { configDotenv } from "dotenv";
+configDotenv();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 console.log("api key : ", process.env.RESEND_API_KEY);
